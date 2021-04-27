@@ -12,3 +12,27 @@ let gender_female    = document.querySelectorAll('#gender-female'),
     reset            = document.querySelector('.form__reset-button'),
     result           = document.querySelector('.counter__result');
 
+age.oninput = function() {
+  chek_input();
+};
+height.oninput = function() {
+  chek_input();
+};
+weight.oninput = function() {
+  chek_input();
+};
+
+reset.onclick = function() {
+  submit.setAttribute('disabled', 'disabled');
+  reset.setAttribute('disabled', 'disabled');
+};
+
+function chek_input() {
+  if (age.value && height.value && weight.value) {
+    console.log('tset');
+    submit.removeAttribute('disabled');
+    reset.removeAttribute('disabled');
+  }
+}
+
+chek_input();
