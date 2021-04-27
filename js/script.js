@@ -25,11 +25,21 @@ weight.oninput = function() {
 reset.onclick = function() {
   submit.setAttribute('disabled', 'disabled');
   reset.setAttribute('disabled', 'disabled');
+  result.classList.add('counter__result--hidden');
+};
+submit.onclick = function(e) {
+  e.preventDefault();
+
+  // if (activity_minimal.checked || activity_low.checked
+  //     || activity_medium.checked || activity_high.checked
+  //     || activity_maximal.checked) {
+  //
+  // }
+  result.classList.remove('counter__result--hidden');
 };
 
 function chek_input() {
   if (age.value && height.value && weight.value) {
-    console.log('tset');
     submit.removeAttribute('disabled');
     reset.removeAttribute('disabled');
   }
