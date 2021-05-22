@@ -14,6 +14,7 @@ let gender_female    = document.querySelector('#gender-female'),
     caloriesMinimal  = result.querySelector('#calories-minimal'),
     caloriesMaximal  = result.querySelector('#calories-maximal');
 
+
 age.oninput = function() {
   chek_input();
 };
