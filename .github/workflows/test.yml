@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: deploy files to server
-        uses: sahilNR/release-upload-sftp@v4
+        uses: sahil-io/release-upload-sftp@4.2
         with:
           # в значение GITHUB_TOKEN помещается ссылка на ваш секрет в репозитории
           # в данном случае его название KEY
