@@ -1,0 +1,27 @@
+# название
+name: Test zip
+
+# целевые события для запуска
+# в данном случае это push и pull_request, в ветку master
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# выполняемые действия
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    # запускаются по шагам
+    # name - название шага
+    # в github actions будет выводиться название шага, и процессы
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: create zip file
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r dir.zip dir
