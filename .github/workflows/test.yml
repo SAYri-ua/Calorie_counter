@@ -28,7 +28,7 @@ jobs:
           # в данном случае его название KEY
           GITHUB_TOKEN: ${{ secrets.TEST_SECRE_TOKEN_ACTION }}
           package_name: 'demo-package'
-          username: 'ubuntu'
+          username: 'runcloud'
           server: ${{ secrets.SERVER_IP }}
           port: 22
           ssh_private_key: ${{ secrets.ssh_key }}
