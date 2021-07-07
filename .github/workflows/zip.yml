@@ -23,7 +23,7 @@ jobs:
         
       - uses: papeloto/action-zip@v1
         with:
-          files: js/
+          files: /
           dest: result.zip
 
       - uses: actions/upload-artifact@v1
