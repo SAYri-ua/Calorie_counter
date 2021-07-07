@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: create zip file
-        uses: montudor/action-zip@v1
+      - uses: papeloto/action-zip@v1
         with:
-          args: zip -qq -r dir.zip . -i calorie_counter
+          files: calorie_counter/
+          dest: result.zip
