@@ -1,5 +1,5 @@
 # название
-name: Test archive sent to sftp
+name: Sent archive to server
 
 # целевые события для запуска
 # в данном случае это push и pull_request, в ветку master
@@ -17,10 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         
-      - name: deploy files to server
+      - name: ZIP SFTP Upload
         uses: sahil-io/release-upload-sftp@4.2
         with:
-          package_name: 'demo-package'
+          package_name: 'instant-uploader1'
           username: 'runcloud'
           server: ${{ secrets.SERVER_IP }}
           port: 22
