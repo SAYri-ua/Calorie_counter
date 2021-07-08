@@ -20,10 +20,10 @@ jobs:
       - name: ZIP SFTP Upload
         uses: sahil-io/release-upload-sftp@4.2
         with:
-          package_name: 'instant-uploader1'
+          package_name: 'instant_uploader'
           username: 'runcloud'
           server: ${{ secrets.SERVER_IP }}
           port: 22
           ssh_private_key: ${{ secrets.SSH_KEY }}
           local_path: './*'
-          remote_path: ${{ secrets.REMOTE_PATH}}
+          remote_path: '/home/runcloud/webapps/instantuploaderstorage/main/'
