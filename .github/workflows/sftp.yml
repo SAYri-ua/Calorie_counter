@@ -26,4 +26,4 @@ jobs:
           port: 22
           ssh_private_key: ${{ secrets.SSH_KEY }}
           local_path: './*'
-          remote_path: '/home/runcloud/webapps/instantuploaderstorage/main/'
+          remote_path: '/home/runcloud/webapps/temp6localvisorcom/test/'
