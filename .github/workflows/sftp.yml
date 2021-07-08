@@ -1,0 +1,29 @@
+# название
+name: Test archive sent to sftp
+
+# целевые события для запуска
+# в данном случае это push и pull_request, в ветку master
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# выполняемые действия
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: deploy files to server
+        uses: sahil-io/release-upload-sftp@4.2
+        with:
+          package_name: 'demo-package'
+          username: 'runcloud'
+          server: ${{ secrets.SERVER_IP }}
+          port: 22
+          ssh_private_key: ${{ secrets.SSH_KEY }}
+          local_path: './*'
+          remote_path: ${{ secrets.REMOTE_PATH}}
