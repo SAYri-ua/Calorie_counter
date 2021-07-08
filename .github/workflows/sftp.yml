@@ -22,7 +22,7 @@ jobs:
         with:
           package_name: 'instant_uploader'
           username: 'runcloud'
-          server: ${{ secrets.SERVER_IP }}
+          server: '45.79.75.110'
           port: 22
           ssh_private_key: ${{ secrets.SSH_KEY }}
           local_path: './*'
